@@ -26,7 +26,7 @@
 
 /*  external requirements  */
 var Url = require("url");
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var XMLHttpRequest = require("node-xmlhttprequest").XMLHttpRequest;
 
 /*  internal requirements  */
 var Cookie    = require("./xmlhttprequest-cookie-obj");
@@ -97,6 +97,7 @@ var XMLHttpRequestWrapper = function () {
                 break;
             case this.HEADERS_RECEIVED:
                 cookie_recv(url, xhr);
+                openedOnce = false; // on redirect, reset cookies
                 break;
             default:
                 break;

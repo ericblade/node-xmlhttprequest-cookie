@@ -27,7 +27,7 @@
         "grunt-contrib-clean":  "~0.7.0"
     },
     "dependencies" : {
-        "xmlhttprequest":       ">=1.8.0"
+        "node-xmlhttprequest":       "ericblade/node-XMLHttpRequest"
     },
     "engines": {
         "node":                 ">=0.8.0"
